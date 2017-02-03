@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ListItem = React.createClass({
+export class ListItem extends React.Component {
     render() {
         return (
             <li>
@@ -8,4 +8,4 @@ export const ListItem = React.createClass({
             </li>
         );
     }
-});
+};

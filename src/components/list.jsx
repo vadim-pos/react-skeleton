@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListItem } from './list-item.jsx';
 
-export const List = React.createClass({
+export class List extends React.Component {
     render() {
         let listItems = this.props.ingredients.map(item => {
             return <ListItem key={item.id} ingredient={item.text} />;
@@ -9,4 +9,4 @@ export const List = React.createClass({
 
         return (<ul>{listItems}</ul>);
     }
-});
+};
