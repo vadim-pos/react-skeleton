@@ -1,5 +1,10 @@
-let React = require('react'),
-    ReactDOM = require('react-dom'),
-    List = require('./components/list.jsx');
+const { render } = ReactDOM;
 
-ReactDOM.render(<List />, document.getElementById('ingredients'));
+render(
+	<h1 id='title'
+		className='header'
+		style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
+	IT WORKS!!
+	</h1>,
+	document.getElementById('react-container')
+);
