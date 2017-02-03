@@ -1,5 +1,8 @@
-let React = require('react'),
-    ListItem = require('./list-item.jsx');
+// let React = require('react'),
+    // ListItem = require('./list-item.jsx');
+
+import React from 'react';
+import { ListItem } from './list-item.jsx';
 
 let ingredients = [
     {id: 1, text: 'ham'},
@@ -7,7 +10,7 @@ let ingredients = [
     {id: 3, text: 'potatoes'}
 ];
 
-let List = React.createClass({
+export const List = React.createClass({
     render() {
         let listItems = ingredients.map(item => {
             return <ListItem key={item.id} ingredient={item.text} />;
@@ -17,4 +20,4 @@ let List = React.createClass({
     }
 });
 
-module.exports = List;
+// module.exports = List;

@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 
 import './scss/main.scss';
 
+import { List } from './components/list.jsx';
+
 ReactDOM.render(
-	<h1 id='title'
-		className='header'>
-	IT WORKS!!
-	</h1>,
+    <List />,
 	document.getElementById('react-container')
 );
