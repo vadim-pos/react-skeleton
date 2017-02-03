@@ -12,18 +12,6 @@ module.exports = {
 		contentBase: './dist',
 		port: 3000
 	},
-	// module: {
-	// 	loaders: [
-	// 		{
-	// 			test: /\.js$/,
-	// 			exclude: /(node_modules)/,
-	// 			loader: ["babel-loader"],
-	// 			query: {
-	// 				presets: ["latest", "stage-0", "react"]
-	// 			}
-	// 		}
-	// 	]
-	// }
 	module: {
 		rules: [
 			{
@@ -41,20 +29,10 @@ module.exports = {
 					}
 				}]
 			},
-			// {
-				// test: /\.css$/,
-				// exclude: /node_modules/,
-				// use: [{
-					// loader: 'style-loader!css-loader!autoprefixer-loader'
-				// }]
-			// },
 			{
 				test:/\.scss$/,
 				exclude: /node_modules/,
 				use: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader']
-				// use: [{
-					// loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
-				// }]
 			}
 		] 
 	}
