@@ -25,20 +25,37 @@ module.exports = {
 	// 	]
 	// }
 	module: {
-		rules: [{
-			test: /\.jsx$/,
-			exclude: /node_modules/,
-			use: [{
-				loader: 'babel-loader',
-				options: {
-					babelrc: false,
-					presets: [
-					'latest',
-					'stage-0',
-					'react'
-					]
-				}
-			}]
-		}] 
+		rules: [
+			{
+				test: /\.jsx$/,
+				exclude: /node_modules/,
+				use: [{
+					loader: 'babel-loader',
+					options: {
+						babelrc: false,
+						presets: [
+						'latest',
+						'stage-0',
+						'react'
+						]
+					}
+				}]
+			},
+			// {
+				// test: /\.css$/,
+				// exclude: /node_modules/,
+				// use: [{
+					// loader: 'style-loader!css-loader!autoprefixer-loader'
+				// }]
+			// },
+			{
+				test:/\.scss$/,
+				exclude: /node_modules/,
+				use: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader']
+				// use: [{
+					// loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
+				// }]
+			}
+		] 
 	}
 }

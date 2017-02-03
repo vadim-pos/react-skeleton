@@ -1,9 +1,11 @@
-const { render } = ReactDOM;
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-render(
+import './scss/main.scss';
+
+ReactDOM.render(
 	<h1 id='title'
-		className='header'
-		style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
+		className='header'>
 	IT WORKS!!
 	</h1>,
 	document.getElementById('react-container')
