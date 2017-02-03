@@ -9456,15 +9456,10 @@ var _listItem = __webpack_require__(83);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// let React = require('react'),
-// ListItem = require('./list-item.jsx');
-
-var ingredients = [{ id: 1, text: 'ham' }, { id: 2, text: 'cheese' }, { id: 3, text: 'potatoes' }];
-
 var List = exports.List = _react2.default.createClass({
     displayName: 'List',
     render: function render() {
-        var listItems = ingredients.map(function (item) {
+        var listItems = this.props.ingredients.map(function (item) {
             return _react2.default.createElement(_listItem.ListItem, { key: item.id, ingredient: item.text });
         });
 
@@ -9475,8 +9470,6 @@ var List = exports.List = _react2.default.createClass({
         );
     }
 });
-
-// module.exports = List;
 
 /***/ }),
 /* 81 */
@@ -9546,9 +9539,6 @@ var ListItem = exports.ListItem = _react2.default.createClass({
         );
     }
 });
-
-// module.exports = ListItem;
-// let React = require('react');
 
 /***/ }),
 /* 84 */
@@ -22123,7 +22113,9 @@ var _list = __webpack_require__(80);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_list.List, null), document.getElementById('react-container'));
+var ingredients = [{ id: 1, text: 'ham' }, { id: 2, text: 'cheese' }, { id: 3, text: 'potatoes' }];
+
+_reactDom2.default.render(_react2.default.createElement(_list.List, { ingredients: ingredients }), document.getElementById('react-container'));
 
 /***/ })
 /******/ ]);

@@ -5,7 +5,11 @@ import './scss/main.scss';
 
 import { List } from './components/list.jsx';
 
-ReactDOM.render(
-    <List />,
-	document.getElementById('react-container')
+let ingredients = [
+    {id: 1, text: 'ham'},
+    {id: 2, text: 'cheese'},
+    {id: 3, text: 'potatoes'}
+];
+
+ReactDOM.render(<List ingredients={ingredients} />, document.getElementById('react-container')
 );

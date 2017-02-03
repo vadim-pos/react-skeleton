@@ -1,4 +1,3 @@
-// let React = require('react');
 import React from 'react';
 
 export const ListItem = React.createClass({
@@ -10,5 +9,3 @@ export const ListItem = React.createClass({
         );
     }
 });
-
-// module.exports = ListItem;
