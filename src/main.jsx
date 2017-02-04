@@ -11,5 +11,4 @@ let ingredients = [
     {id: 3, text: 'potatoes'}
 ];
 
-ReactDOM.render(<List ingredients={ingredients} />, document.getElementById('react-container')
-);
+ReactDOM.render(<List ingredients={ingredients} />, document.getElementById('react-container'));
