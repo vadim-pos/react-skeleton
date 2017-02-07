@@ -1,11 +1,19 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
-	entry: "./src/main.jsx",
+	entry: [
+		'./src/app.jsx'
+	],
+	plugins: [
+		new webpack.ProvidePlugin({
+			'$': 'jquery',
+			'jQuery': 'jquery'
+		})
+	],
 	output: {
-		path: "dist/assets",
-		filename: "bundle.js",
-		publicPath: "assets"
+		path: 'dist/assets',
+		filename: 'bundle.js',
+		publicPath: 'assets'
 	},
 	devServer: {
 		inline: true,
@@ -15,7 +23,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: [{
 					loader: 'babel-loader',
@@ -28,6 +36,10 @@ module.exports = {
 						]
 					}
 				}]
+			},
+			{
+				test:/\.css$/,
+				use: ['style-loader', 'css-loader', 'autoprefixer-loader']
 			},
 			{
 				test:/\.scss$/,
