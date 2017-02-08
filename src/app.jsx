@@ -5,6 +5,13 @@ import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 // Components 
 import { Main } from './components/main.jsx';
 
+// Vendors
+import 'jquery/dist/jquery.min.js';
+import 'foundation-sites/dist/js/foundation.min.js';
+// Load Foundation
+import 'foundation-sites/dist/css/foundation.min.css';
+$(document).foundation();
+
 // Styles
 import './scss/main.scss';
 
