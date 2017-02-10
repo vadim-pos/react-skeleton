@@ -9,7 +9,6 @@ import { Main } from './components/main.jsx';
 import 'jquery/dist/jquery.min.js';
 import 'foundation-sites/dist/js/foundation.min.js';
 // Load Foundation
-import 'foundation-sites/dist/css/foundation.min.css';
 $(document).foundation();
 
 // Styles

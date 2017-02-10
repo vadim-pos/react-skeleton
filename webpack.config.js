@@ -65,7 +65,19 @@ module.exports = (env) => {
 				{
 					test:/\.scss$/,
 					exclude: /node_modules/,
-					use: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader']
+					use: [
+						'style-loader',
+						'css-loader',
+						'autoprefixer-loader',
+						{
+							loader: 'sass-loader',
+							options: {
+								includePaths: [
+									path.resolve(__dirname, './node_modules/foundation-sites/scss')
+								]
+							}
+						}
+					]
 				}
 			] 
 		},
