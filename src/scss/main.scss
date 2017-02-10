@@ -1,3 +1,4 @@
-p {
-    color: green;
-}
+@import "base/variables";
+
+// Components
+@import 'components/main';
