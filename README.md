@@ -1,6 +1,6 @@
-Boilerplate for React + Redux development
+# Boilerplate for React + Redux development
 
-## Setup
+### Setup
 ```
 $ npm install
 ```
