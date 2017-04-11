@@ -1,5 +1,4 @@
-let isOnProduction = false;
-let webpackConfig = require('./webpack.config')(isOnProduction);
+const webpackConfig = require('./webpack.config');
 
 module.exports = (config) => {
     config.set({
